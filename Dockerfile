@@ -73,7 +73,7 @@ RUN set -ex \
     perl-net-ssleay \
     postgresql-client \
     tmux \
-    psql
+    postgresql
 
 # Installing ctop - top-like container monitor
 COPY --from=fetcher /tmp/ctop /usr/local/bin/ctop
@@ -100,6 +100,7 @@ RUN curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/in
 RUN git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 RUN git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 COPY zshrc .zshrc
+COPY tmux.conf .tmux.conf
 COPY motd motd
 
 # Fix permissions for OpenShift and tshark
