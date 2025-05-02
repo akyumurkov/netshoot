@@ -73,7 +73,8 @@ RUN set -ex \
     perl-net-ssleay \
     postgresql-client \
     tmux \
-    postgresql
+    postgresql \
+    mysql
 
 # Installing ctop - top-like container monitor
 COPY --from=fetcher /tmp/ctop /usr/local/bin/ctop
