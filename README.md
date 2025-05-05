@@ -205,7 +205,11 @@ To troubleshoot these issues, `netshoot` includes a set of powerful tools as rec
     websocat \
     swaks \
     perl-crypt-ssleay \
-    perl-net-ssleay
+    perl-net-ssleay \
+    postgresql-client \
+    tmux \
+    postgresql \
+    mysql
     
 ## **Sample Use-cases** 
 
