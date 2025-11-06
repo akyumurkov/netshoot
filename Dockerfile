@@ -56,7 +56,7 @@ RUN set -ex \
     py3-setuptools \
     scapy \
     socat \
-    sleep \
+    lua-sleep \
     speedtest-cli \
     openssh \
     oh-my-zsh \
