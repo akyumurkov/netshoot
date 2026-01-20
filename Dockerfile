@@ -76,7 +76,16 @@ RUN set -ex \
     postgresql-client \
     tmux \
     postgresql \
-    mysql
+    mysql \
+    ca-certificates \
+    curl \
+    libc6-compat
+
+RUN curl -sL https://aka.ms/downloadazcopy-v10-linux \
+    | tar -xz \
+ && cp azcopy_linux_amd64_*/azcopy /usr/local/bin/azcopy \
+ && chmod +x /usr/local/bin/azcopy \
+ && rm -rf azcopy_linux_amd64_*
 
 # Installing ctop - top-like container monitor
 COPY --from=fetcher /tmp/ctop /usr/local/bin/ctop
